@@ -1,0 +1,1 @@
+# Custom Theia IDE used in fullstack.pl
