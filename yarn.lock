@@ -1298,7 +1298,7 @@
     filenamify "^4.1.0"
     request "^2.82.0"
 
-"@theia/plugin-ext@^1.8.1", "@theia/plugin-ext@latest":
+"@theia/plugin-ext@^1.8.1":
   version "1.8.1"
   resolved "https://registry.yarnpkg.com/@theia/plugin-ext/-/plugin-ext-1.8.1.tgz#d451f93013c3250c7e4f013b3d528c9a3ff955d5"
   integrity sha512-qm89nFCFnzJzV9IVlwBpl5sEnikwqcE5xnYRgJxhd7EkU59oG4PQ0gi4/nKkbOlZ7BIU5rr22n5pCVNnKqK1GQ==

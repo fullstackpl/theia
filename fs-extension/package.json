@@ -1,5 +1,5 @@
 {
-  "name": "auto-open",
+  "name": "fs-extension",
   "keywords": [
     "theia-extension"
   ],
@@ -24,7 +24,7 @@
   },
   "theiaExtensions": [
     {
-      "frontend": "lib/browser/auto-open-frontend-module"
+      "frontend": "lib/browser/fs-extension-frontend-module"
     }
   ]
 }
