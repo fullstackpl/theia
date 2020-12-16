@@ -37,10 +37,11 @@
     "prettier": "https://open-vsx.org/api/esbenp/prettier-vscode/5.8.0/file/esbenp.prettier-vscode-5.8.0.vsix"
   },
   "scripts": {
-    "prepare": "theia build --mode development",
+    "prepare": "theia download:plugins && theia build --mode development",
     "start": "theia start --plugins=local-dir:plugins --port=8080",
     "watch": "theia build --watch --mode development",
-    "build:prod": "theia build --mode production"
+    "build:prod": "theia build --mode production",
+    "download:plugins": "theia download:plugins"
   },
   "theia": {
     "target": "browser",
