@@ -1,0 +1,20 @@
+{
+  "private": true,
+  "scripts": {
+    "prepare": "lerna run prepare",
+    "build:prod": "lerna run build:prod",
+    "rebuild:browser": "theia rebuild:browser",
+    "start": "lerna run --scope browser-app start"
+  },
+  "devDependencies": {
+    "lerna": "2.4.0"
+  },
+  "workspaces": [
+    "fs-extension",
+    "browser-app"
+  ],
+  "resolutions": {
+    "vscode-jsonrpc": "5.0.1",
+    "vscode-languageserver-protocol": "3.15.3"
+  }
+}
