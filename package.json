@@ -2,6 +2,7 @@
   "private": true,
   "scripts": {
     "prepare": "lerna run prepare",
+    "build:prod": "lerna run build:prod",
     "rebuild:browser": "theia rebuild:browser",
     "start": "lerna run --scope browser-app start"
   },

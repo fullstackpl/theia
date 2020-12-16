@@ -19,6 +19,7 @@
     "prepare": "yarn run clean && yarn run build",
     "clean": "rimraf lib",
     "build": "tsc",
+    "build:prod": "tsc",
     "watch": "tsc -w"
   },
   "theiaExtensions": [
