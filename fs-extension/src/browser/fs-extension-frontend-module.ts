@@ -1,15 +1,16 @@
-import { CommandContribution } from '@theia/core';
+import { CommandContribution, MenuContribution } from '@theia/core';
 import { FrontendApplicationContribution } from '@theia/core/lib/browser';
 import { ContainerModule } from 'inversify';
 import { ExplorerContribution } from './explorer-contribution';
-import { FileFileMenuContribution } from './fix-file-menu-contribution';
+import { FixMenuContribution } from './fix-menu-contribution';
+import { hideViews } from './hide-views';
 import { PingContribution } from './ping-contribution';
 
-export default new ContainerModule((bind) => {
+export default new ContainerModule((bind, unbind, isBind, rebind) => {
   bind(ExplorerContribution)
     .toSelf()
     .inSingletonScope();
-  bind(FileFileMenuContribution)
+  bind(FixMenuContribution)
     .toSelf()
     .inSingletonScope();
   bind(PingContribution)
@@ -17,5 +18,8 @@ export default new ContainerModule((bind) => {
     .inSingletonScope();
   bind(FrontendApplicationContribution).to(ExplorerContribution);
   bind(FrontendApplicationContribution).to(PingContribution);
-  bind(CommandContribution).toService(FileFileMenuContribution);
+  bind(CommandContribution).toService(FixMenuContribution);
+  bind(MenuContribution).toService(FixMenuContribution);
+
+  hideViews(rebind);
 });
