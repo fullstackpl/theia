@@ -25,6 +25,9 @@
   "theiaExtensions": [
     {
       "frontend": "lib/browser/fs-extension-frontend-module"
+    },
+    {
+      "backend": "lib/browser/fs-extension-backend-module"
     }
   ]
 }
