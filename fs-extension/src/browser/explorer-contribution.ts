@@ -18,7 +18,18 @@ export class ExplorerContribution implements FrontendApplicationContribution {
   protected readonly fileNavigator: FileNavigatorContribution;
 
   async onDidInitializeLayout(app: FrontendApplication): Promise<void> {
+    const style = document.createElement('style');
+    style.setAttribute('type', 'text/css');
+    style.setAttribute('id', 'fs-custom-style');
+    style.innerHTML = `
+    #explorer-view-container--plugin-view\\:npm {
+      min-height: 200px !important;
+    }
+    `;
+    document.head.append(style);
+
     const navigator = await this.fileNavigator.widget;
+
     if (!this.shell.mainPanel.isEmpty) {
       return;
     }
